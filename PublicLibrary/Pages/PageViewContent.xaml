@@ -1,0 +1,181 @@
+﻿<Page x:Class="PublicLibrary.Pages.PageViewContent"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PublicLibrary.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageViewContent">
+
+    <TabControl>
+        <TabItem Header="Paragraph">
+            <FlowDocumentScrollViewer>
+                <FlowDocument>
+                    <Paragraph x:Name="FirstParagraph">
+                        <Run>
+                            Герцен родился в семье богатого помещика Ивана Алексеевича Яковлева (1767—1846), происходившего от Андрея Кобылы (как и Романовы).
+                        </Run>
+                    </Paragraph>
+                    <Paragraph x:Name="SecondParagraph">
+                        Мать — 16-летняя немка Генриетта-Вильгельмина-Луиза Гааг (нем. Henriette Wilhelmina Luisa Haag), дочь мелкого чиновника, делопроизводителя в казённой палате в Штутгарте.
+                    </Paragraph>
+                </FlowDocument>
+            </FlowDocumentScrollViewer>
+        </TabItem>
+        <TabItem Header="List">
+            <FlowDocumentScrollViewer>
+                <FlowDocument>
+                    <Paragraph FontWeight="Bold">Семья Герцена А.И.</Paragraph>
+                    <List>
+                        <ListItem>
+                            <Paragraph>
+                                Александр (1839—1906), известный физиолог, жил в Швейцарии.
+                            </Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                Наталья (р. и ум. 1841), умерла через 2 дня после рождения.
+                            </Paragraph>
+                        </ListItem>
+                    </List>
+                    <Paragraph>Память</Paragraph>
+                    <List MarkerStyle="Decimal">
+                        <ListItem>
+                            <Paragraph>Библиотека им. А. И. Герцена в г. Санкт-Петербург</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>
+                                Библиотека им. Герцена А. И. в Омске
+                            </Paragraph>
+                        </ListItem>
+                    </List>
+
+
+                </FlowDocument>
+            </FlowDocumentScrollViewer>
+        </TabItem>
+        <TabItem Header="Table">
+            <FlowDocument>
+                <Paragraph>Содержание</Paragraph>
+                <Table>
+                    <TableRowGroup>
+                        <!-- TR -->
+                        <TableRow>
+                            <!-- TBODY-->
+                            <!-- TD -->
+                            <TableCell BorderBrush="Black" BorderThickness="1">
+                                <Paragraph># п.п.</Paragraph>
+                            </TableCell>
+
+                            <TableCell BorderBrush="Black" BorderThickness="1">
+                                <Paragraph>Наименование</Paragraph>
+                            </TableCell>
+
+                            <TableCell BorderBrush="Black" BorderThickness="1">
+                                <Paragraph>Ссылка</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>1</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Биография</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph TextDecorations="Underline" Foreground="Blue" >
+                                    https://ru.wikipedia.org/wiki</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+
+
+                </Table>
+            </FlowDocument>
+        </TabItem>
+        <TabItem Header="Section">
+            <FlowDocument>
+                <Section FontFamily="Palation" Background="LightYellow"
+                         Padding="25" Margin="5">
+                    <Paragraph>
+                        Университет (1829−1833 гг.)
+                    </Paragraph>
+                    <Paragraph>
+                        Герцен грезил дружбой, мечтал о борьбе и страданиях за свободу. В таком настроении Герцен поступил в Московский университет на физико-математическое отделение, и здесь это настроение ещё более усилилось.
+                    </Paragraph>
+                    <Paragraph>
+                        В университете Герцен принимал участие в так называемой «маловской истории» (протест студентов против нелюбимого преподавателя), но отделался сравнительно легко — недолгим заключением, вместе со многими товарищами, в карцере.
+                    </Paragraph>
+                    <Paragraph>
+                        Из преподавателей только М.Т. Каченовский своим скептицизмом и М.Г. Павлов, на лекциях сельского хозяйства знакомивший слушателей с немецкой философией, будили молодую мысль
+                    </Paragraph>
+                </Section>
+                <BlockUIContainer>
+                    <Button Content="Print" Command="ApplicationCommands.Print"/>
+                </BlockUIContainer>
+            </FlowDocument>
+        </TabItem>
+        <TabItem>
+            <FlowDocumentPageViewer>
+                <FlowDocument  IsOptimalParagraphEnabled="True" IsHyphenationEnabled="True">
+                    <Paragraph>
+                        Русское племя — свежее девственное племя, у которого есть «чаянье будущего века», неизмеримый и непочатой запас жизненных сил и энергий;
+                        <Run xml:space="preserve"></Run>
+                        <Floater Width="250" HorizontalAlignment="Left"
+                             FontSize="24"
+                             FontStyle="Italic"
+                             Foreground="Green" Padding="5" Margin="5,10,15,10">
+                            <Paragraph>
+                                «мыслящий человек в России — самый независимый и самый непредубеждённый человек в свете»
+                            </Paragraph>
+                        </Floater>
+                    </Paragraph>
+                    <Paragraph>Герцен был убеждён, что славянский мир стремится к единству, и так как «централизация противна славянскому духу», то славянство объединится на принципах федераций. Относясь свободомысленно ко всем религиям, Герцен признавал, однако, за православием многие преимущества и достоинства по сравнению с католицизмом и протестантством</Paragraph>
+                    <Paragraph>Как последовательный гегельянец, Герцен верил, что развитие человечества идёт ступенями, и каждая ступень воплощается в известном народе. Герцен, смеявшийся над тем, что гегелевский бог живёт в Берлине, в сущности перенёс этого бога в Москву, разделяя со славянофилами веру в грядущую смену германского периода славянским.</Paragraph>
+
+                    <Paragraph Margin="0 30 0 0" FontWeight="Bold">
+                        Литературная и публицистическая деятельность
+                    </Paragraph>
+
+                    <Paragraph>
+                        Литературная деятельность Герцена началась ещё в 1830-х годах. В «Атенее» за 1831 год (II т.) его имя встречается под одним переводом с французского. Первая статья, подписанная псевдонимом Искандер, была напечатана в «Телескопе» за 1836 год («Гофман»).
+                        <Floater Width="150" Padding="5 0 5 0" 
+                                 HorizontalAlignment="Right">
+                            <BlockUIContainer>
+                                <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Alexander_Herzen_by_Vallotton.jpg/220px-Alexander_Herzen_by_Vallotton.jpg"/>
+                            </BlockUIContainer>
+                            <Paragraph FontStyle="Italic" FontSize="10">
+                                Феликс Валлоттон. Портрет Герцена, 1895
+                            </Paragraph>
+                        </Floater>
+                    </Paragraph>
+                </FlowDocument>
+            </FlowDocumentPageViewer>
+        </TabItem>
+        <TabItem Header="RichTextBox">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition  Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <RichTextBox Grid.Row="0" x:Name="myRichTextBox">
+                    <FlowDocument>
+                        <Paragraph FontWeight="Bold">Цитаты</Paragraph>
+                        <Paragraph>«Не будем выдумывать бога, если его нет, — от этого его всё же не будет».</Paragraph>
+                        <Paragraph>«Во всяком возрасте и при различных обстоятельствах я возвращался к чтению Евангелия, и всякий раз его содержание низводило мир и кротость в душу».</Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+                <Grid Grid.Row="1">
+                    <Button HorizontalAlignment="Left" Content="Load Document"
+                            Click="Button_Click" Width="150" Height="25"/>
+                    
+                    <Button HorizontalAlignment="Center"
+                            Width="150" Height="25" Content="Save Document"
+                            Click="Button_Click_1"/>
+                </Grid>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Page>
